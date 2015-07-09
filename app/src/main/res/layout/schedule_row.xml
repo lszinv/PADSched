@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal" >
+
+    <LinearLayout
+        android:layout_width="@dimen/eventColumnWidth"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell_shape"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/eventIcon"
+            android:layout_width="@dimen/eventIconSize"
+            android:layout_height="@dimen/eventIconSize"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="0dp"
+            android:contentDescription="@string/EventContentDescription"
+            android:paddingTop="@dimen/eventIconPadding" />
+
+        <TextView
+            android:id="@+id/eventText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingRight="@dimen/eventTextPadding"
+            android:paddingLeft="@dimen/eventTextPadding"
+            android:textSize="@dimen/eventNameTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/groupACell"
+        android:layout_width="@dimen/ScheduleColumnWidth"
+        android:layout_height="match_parent"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/groupADateTextView"
+            android:layout_width="@dimen/ScheduleColumnWidth"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/ScheduleTextPadding"
+            android:text=""
+            android:textSize="@dimen/ScheduleDateTextSize" />
+
+        <TextView
+            android:id="@+id/groupATimeTextView"
+            android:layout_width="@dimen/ScheduleColumnWidth"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/ScheduleTextPadding"
+            android:textSize="@dimen/ScheduleTimeTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/groupBCell"
+        android:layout_width="@dimen/ScheduleColumnWidth"
+        android:layout_height="match_parent"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/groupBDateTextView"
+            android:layout_width="@dimen/ScheduleColumnWidth"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/ScheduleTextPadding"
+            android:text=""
+            android:textSize="@dimen/ScheduleDateTextSize" />
+
+        <TextView
+            android:id="@+id/groupBTimeTextView"
+            android:layout_width="@dimen/ScheduleColumnWidth"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/ScheduleTextPadding"
+            android:text=""
+            android:textSize="@dimen/ScheduleTimeTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/groupCCell"
+        android:layout_width="@dimen/ScheduleColumnWidth"
+        android:layout_height="match_parent"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/groupCDateTextView"
+            android:layout_width="@dimen/ScheduleColumnWidth"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/ScheduleTextPadding"
+            android:text=""
+            android:textSize="@dimen/ScheduleDateTextSize" />
+
+        <TextView
+            android:id="@+id/groupCTimeTextView"
+            android:layout_width="@dimen/ScheduleColumnWidth"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/ScheduleTextPadding"
+            android:text=""
+            android:textSize="@dimen/ScheduleTimeTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/groupDCell"
+        android:layout_width="@dimen/ScheduleColumnWidth"
+        android:layout_height="match_parent"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/groupDDateTextView"
+            android:layout_width="@dimen/ScheduleColumnWidth"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/ScheduleTextPadding"
+            android:text=""
+            android:textSize="@dimen/ScheduleDateTextSize" />
+
+        <TextView
+            android:id="@+id/groupDTimeTextView"
+            android:layout_width="@dimen/ScheduleColumnWidth"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/ScheduleTextPadding"
+            android:text=""
+            android:textSize="@dimen/ScheduleTimeTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/groupECell"
+        android:layout_width="@dimen/ScheduleColumnWidth"
+        android:layout_height="match_parent"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/groupEDateTextView"
+            android:layout_width="@dimen/ScheduleColumnWidth"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/ScheduleTextPadding"
+            android:text=""
+            android:textSize="@dimen/ScheduleDateTextSize" />
+
+        <TextView
+            android:id="@+id/groupETimeTextView"
+            android:layout_width="@dimen/ScheduleColumnWidth"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/ScheduleTextPadding"
+            android:text=""
+            android:textSize="@dimen/ScheduleTimeTextSize" />
+    </LinearLayout>
+
+</TableRow>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal" >
+
+    <TextView
+        android:id="@+id/eventHeaderTextView"
+        android:layout_width="@dimen/eventColumnWidth"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:padding="@dimen/eventTextPadding"
+        android:text="Event"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/groupAHeaderTextView"
+        android:layout_width="@dimen/ScheduleColumnWidth"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:padding="@dimen/eventTextPadding"
+        android:text="A"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/groupBHeaderTextView"
+        android:layout_width="@dimen/ScheduleColumnWidth"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:padding="@dimen/eventTextPadding"
+        android:text="B"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/groupCHeaderTextView"
+        android:layout_width="@dimen/ScheduleColumnWidth"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:padding="@dimen/eventTextPadding"
+        android:text="C"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/groupDHeaderTextView"
+        android:layout_width="@dimen/ScheduleColumnWidth"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:padding="@dimen/eventTextPadding"
+        android:text="D"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/groupEHeaderTextView"
+        android:layout_width="@dimen/ScheduleColumnWidth"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cell_shape"
+        android:gravity="center"
+        android:padding="@dimen/eventTextPadding"
+        android:text="E"
+        android:textStyle="bold" />
+</TableRow>

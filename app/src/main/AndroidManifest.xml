@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lsz.padsched"
+    android:versionCode="3"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <supports-screens android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="false"
+        android:xlargeScreens="false"
+        android:anyDensity="true"
+        android:resizeable="true"
+        />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/padsched"
+        android:label="PAD Schedule"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="PAD Schedule" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".ScheduleAlarmReceiver"
+            android:process=":remote" >
+        </receiver>
+
+        <receiver
+            android:name=".CheckAlarmReceiver"
+            android:process=":remote" >
+        </receiver>
+    </application>
+
+</manifest>

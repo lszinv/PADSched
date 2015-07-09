@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/page_padding" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/AlertInfo"
+                    android:textSize="@dimen/alertInfoTextSize" />
+            </TableRow>
+
+            <!-- Group Enabler -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enable alerts for" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <ToggleButton
+                            android:id="@+id/aToggle"
+                            android:layout_width="@dimen/toggleSize"
+                            android:layout_height="wrap_content"
+                            android:textOff="Group A"
+                            android:textOn="Group A"
+                            android:textSize="@dimen/togglerTextSize" />
+
+                        <ToggleButton
+                            android:id="@+id/bToggle"
+                            android:layout_width="@dimen/toggleSize"
+                            android:layout_height="wrap_content"
+                            android:textOff="Group B"
+                            android:textOn="Group B"
+                            android:textSize="@dimen/togglerTextSize" />
+
+                        <ToggleButton
+                            android:id="@+id/cToggle"
+                            android:layout_width="@dimen/toggleSize"
+                            android:layout_height="wrap_content"
+                            android:textOff="Group C"
+                            android:textOn="Group C"
+                            android:textSize="@dimen/togglerTextSize" />
+
+                        <ToggleButton
+                            android:id="@+id/dToggle"
+                            android:layout_width="@dimen/toggleSize"
+                            android:layout_height="wrap_content"
+                            android:textOff="Group D"
+                            android:textOn="Group D"
+                            android:textSize="@dimen/togglerTextSize" />
+
+                        <ToggleButton
+                            android:id="@+id/eToggle"
+                            android:layout_width="@dimen/toggleSize"
+                            android:layout_height="wrap_content"
+                            android:textOff="Group E"
+                            android:textOn="Group E"
+                            android:textSize="@dimen/togglerTextSize" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/bigDivider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Group chooser -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="Alert preferences for group" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="#E0E0E0"
+                    android:orientation="horizontal" >
+
+                    <Spinner
+                        android:id="@+id/groupSpinner"
+                        android:layout_width="@dimen/spinnerSize"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:dropDownWidth="@dimen/spinnerSize"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editSwitchWarning"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="8dp"
+                    android:text="@string/disabledEdit"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/batchDisableButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/BatchDisableText" />
+
+                    <Button
+                        android:id="@+id/batchEnableButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/BatchEnableText" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Ruby Dragon -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/ruby" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/ruby" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/rubySwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Sapphire Dragon -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/sapphire" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/safa" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/SapphireSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Emerald Dragon -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/emerald" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/eme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/EmeSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Metal Dragon -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/metal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/meta" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/metaSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Gold Dragon -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/gold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/gold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/goldSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- MetaGold Dragon -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/meta_gold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/metagold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/metaGoldSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- King Carnival Dragon -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/king_carnival" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/kingCarnival" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/kingSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Super King Carnival Dragon -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/super_king" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/superKingCarnival" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/superKingSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+
+            <!-- Evo Rush -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/evolution" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/evo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/evoSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Starry Vault -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/starvault" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/starvault" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/starSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Dragon Plant -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/dragon_plant" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/dragonPlants" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/dragonPlantSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Pengdra Plant -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/pengdra" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/pengu" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/pengdraSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- TAMADRA -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/tamadra" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/tama" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/tamaSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- Extreme -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/extreme" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/extreme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/extremeSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/Divider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+
+            <!-- COIN -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/eventIconSize"
+                        android:layout_height="@dimen/eventIconSize"
+                        android:src="@drawable/coin" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/alertEventIconTextPadding"
+                        android:text="@string/coin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <Switch
+                        android:id="@+id/coinSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

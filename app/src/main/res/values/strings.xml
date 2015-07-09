@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ScheduleTitle">Schedule</string>
+    <string name="AlertsTitle">Alerts</string>
+    <string name="MiscTitle">Misc</string>
+    <string name="EventContentDescription">Event</string>
+    <string name="NoScheduleData">No schedule data - Pull down to refresh or check again later.</string>
+
+    <string name="columnTitleA">A</string>
+    <string name="columnTitleB">B</string>
+    <string name="columnTitleC">C</string>
+    <string name="columnTitleD">D</string>
+    <string name="columnTitleE">E</string>
+
+    <string name="AlertInfo">Set automatic notifcations when dungeons events start.</string>
+
+    <!--  Dungeon Names -->
+    <string name="ruby">Ruby Dragons</string>
+    <string name="choRuby">Super Ruby Dragons</string>
+    <string name="eme">Emerald Dragons</string>
+    <string name="choEme">Super Emerald Dragons</string>
+    <string name="safa">Sapphire Dragons</string>
+    <string name="choSafa">Super Sapphire Dragons</string>
+    <string name="meta">Metal Dragons</string>
+    <string name="choMeta">Super Metal Dragons</string>
+    <string name="gold">Gold Dragons</string>
+    <string name="choGold">Super Gold Dragons</string>
+    <string name="pengu">Pengdra Village</string>
+    <string name="kingCarnival">King Carnival</string>
+    <string name="superKingCarnival">Super King Carnival</string>
+    <string name="evo">Together at Last! Evo Rush!!</string>
+    <string name="dragonPlants">Alert! Dragon Plant Infestation!</string>
+    <string name="starvault">Ruins of the Star Vault</string>
+    <string name="metagold">Metal/Gold Dungeon</string>
+    <string name="tama">TAMADRA Retreat</string>
+    <string name="extreme">Extreme King Metal Dragon!</string>
+    <string name="unknown">Unknown Dungeon</string>
+    <string name="coin">Golden Mound</string>
+
+    <string name="BatchEnableText">Enable All</string>
+    <string name="BatchDisableText">Disable All</string>
+
+    <string name="disabledEdit">Disable master toggle to edit this group\'s alert switches</string>
+
+    <string-array name="groups">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+</resources>

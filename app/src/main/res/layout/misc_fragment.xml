@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/page_padding" >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="How to figure out your group" />
+
+            </TableRow>
+
+            <!--         Temporarily forcing licensing information's formatting. Planning to have this whole screen changed to something else and moving this information into -->
+            <!--         an action bar option -->
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:text="The group you belong to is based off your user id. \r\n
+Specifically, if your id's third digit is..." />
+
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 0 or 5: Group A" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 1 or 6: Group B" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 2 or 7: Group C" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 3 or 8: Group D" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 4 or 9: Group E" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    style="@style/bigDivider"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/alertEventDividerMargin"
+                    android:layout_marginTop="@dimen/alertEventDividerMargin" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:text="jsoup License" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The jsoup code-base (include source and compiled \r\n
+packages) are distributed under the open source \r\n
+MIT license as described below." />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TableRow>
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="The MIT License" />
+
+            <TableRow
+                android:id="@+id/tableRow10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9dp"
+                    android:text="Copyright © 2009 - 2013 Jonathan Hedley (jonathan@hedley.net)" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Permission is hereby granted, free of charge, to \r\n
+any person obtaining a copy of this software and \r\n
+associated documentation files (the &quot;Software&quot;), \r\n
+to deal in the Software without restriction, \r\n
+including without limitation the rights to use, copy, \r\n
+modify, merge, publish, distribute, sublicense, \r\n
+and/or sell copies of the Software, and to permit \r\n
+persons to whom the Software is furnished to do \r\n
+so, subject to the following conditions:" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The above copyright notice and this permission notice \r\n
+shall be included in all copies or substantial \r\n
+portions of the Software." />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT \r\n
+WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, \r\n
+INCLUDING BUT NOT LIMITED TO THE \r\n
+WARRANTIES OF MERCHANTABILITY, FITNESS \r\n
+FOR A PARTICULAR PURPOSE AND \r\n
+NONINFRINGEMENT. IN NO EVENT SHALL THE \r\n
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE \r\n
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, \r\n
+WHETHER IN AN ACTION OF CONTRACT, TORT OR \r\n
+OTHERWISE, ARISING FROM, OUT OF OR IN \r\n
+CONNECTION WITH THE SOFTWARE OR THE USE \r\n
+OR OTHER DEALINGS IN THE SOFTWARE." />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

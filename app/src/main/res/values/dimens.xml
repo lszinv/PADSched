@@ -1,0 +1,36 @@
+<resources>
+
+    <!--  Schedule screen -->
+    <dimen name="activity_horizontal_margin">5dp</dimen>
+    <dimen name="activity_vertical_margin">5dp</dimen>
+
+    <dimen name="ScheduleColumnWidth">50dp</dimen>
+    <dimen name="eventColumnWidth">70dp</dimen>
+    <dimen name="page_padding">5dp</dimen>
+
+    <dimen name="ScheduleDateTextSize">10sp</dimen>
+    <dimen name="ScheduleTimeTextSize">10sp</dimen>
+    <dimen name="ScheduleTextPadding">0dp</dimen>
+
+    <dimen name="eventIconSize">35dp</dimen>
+    <dimen name="eventIconPadding">2dp</dimen>
+    <dimen name="eventTextPadding">5dp</dimen>
+    <dimen name="eventNameTextSize">10sp</dimen>
+
+    <dimen name="noDataTextSize">10sp</dimen>
+
+    <!-- (eventColumnWidth)70 + 5*(ScheduleColumnWidth)50 = 320 -->
+    <dimen name="emptyScheduleWidth">320dp</dimen>
+
+    <!--  Alerts screen -->
+    <dimen name="alertEventIconTextPadding">5dp</dimen>
+    <dimen name="alertEventDividerMargin">5dp</dimen>
+
+    <dimen name="spinnerSize">50dp </dimen>
+
+    <dimen name="alertInfoTextSize">12sp</dimen>
+
+    <dimen name="togglerTextSize">8sp</dimen>
+    <dimen name="toggleSize">60dp</dimen>
+
+</resources>

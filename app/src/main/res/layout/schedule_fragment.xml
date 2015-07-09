@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:padding="5dp" >
+
+    <FrameLayout
+        android:id="@+id/footerFrame"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/sourceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_horizontal"/>
+    </FrameLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/footerFrame"  >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+                <TableLayout
+                    android:id="@+id/scheduleTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" >
+
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/eventHeaderTextView"
+                            android:layout_width="@dimen/eventColumnWidth"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="@dimen/eventTextPadding"
+                            android:text="Event"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/groupAHeaderTextView"
+                            android:layout_width="@dimen/ScheduleColumnWidth"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="@dimen/eventTextPadding"
+                            android:text="A"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/groupBHeaderTextView"
+                            android:layout_width="@dimen/ScheduleColumnWidth"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="@dimen/eventTextPadding"
+                            android:text="B"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/groupCHeaderTextView"
+                            android:layout_width="@dimen/ScheduleColumnWidth"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="@dimen/eventTextPadding"
+                            android:text="C"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/groupDHeaderTextView"
+                            android:layout_width="@dimen/ScheduleColumnWidth"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="@dimen/eventTextPadding"
+                            android:text="D"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/groupEHeaderTextView"
+                            android:layout_width="@dimen/ScheduleColumnWidth"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="@dimen/eventTextPadding"
+                            android:text="E"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/emptyScheduleTextView"
+                            android:layout_height="wrap_content"
+                            android:layout_span="6"
+                            android:background="@drawable/cell_shape"
+                            android:gravity="center"
+                            android:padding="@dimen/eventTextPadding"
+                            android:textSize="@dimen/noDataTextSize"
+                            android:text="@string/NoScheduleData"/>
+                    </TableRow>
+                </TableLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textSize="8sp"/>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
